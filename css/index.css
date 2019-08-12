@@ -170,7 +170,7 @@ h5 {
 nav {
 	display: flex;
 	justify-content: space-evenly;
-	margin-top: 20px;
+	margin-top: 40px;
 	justify-content: space-between;
 }
 
@@ -189,23 +189,25 @@ header{
     display:flex;
     justify-content: flex-end;
     text-align: center;
-    margin: 50px 0;
+    margin: 70px 0;
 }
 .title{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-right: 150px;
+    flex-grow:2;
 }
 .title h1{
     font-size: 80px;
     margin: 0;
 }
 button {
-    width: 100%;
+    width: 30%;
+    height: 8%;
     border: 1px solid black;
     
 }
+
 
 /************ TOP CONTENT STYLES *******************/
 .topContent{
@@ -246,7 +248,8 @@ footer{
 /********************** MEDIA QUERIES *********************/
 
 /*********************** MOBILE ************************/
-@media screen and (max-width:736px) and (min-width: 414px){
+@media screen and (max-width:736px) 
+    and (min-width: 414px) {
 /********************** NAV STYLES ******************/
     nav {
         display: flex;
@@ -278,7 +281,7 @@ footer{
     .headerImg img{
         display: none;
     }
-
+/***********************CONTENT STYLES  *****************/
     .topContent, .bottomContent {
         display: flex;
         flex-direction: column;
@@ -292,5 +295,23 @@ footer{
         width:95%;
         margin: 10px auto;
     }
+}
+
+/*********************** TABLET ************************/
+@media only screen 
+  and (min-width: 768px) 
+  and (max-width: 1024px) {
+    .headerImg img{
+        display: none;
+    }
+    header{
+        display: flex;
+        justify-content: center;
+    }
+    .title{
+        margin:0px;
+        display: flex;
+    }
+    
 
 }
