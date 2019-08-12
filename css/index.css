@@ -167,21 +167,28 @@ h5 {
     margin: 0 50px 0 50px;
 }
 /**************** NAVIGATION STYLES ***************/
-nav {
-	display: flex;
-	justify-content: space-evenly;
-	margin-top: 40px;
-	justify-content: space-between;
+nav{
+    display: flex;
+    margin-top: 20px;
+
+}
+.topNav{
+    width:70%;
+    display: flex;
+    justify-content: space-between;
 }
 
 nav a {
 	color: lightgray;
-	text-decoration: none;
+    text-decoration: none;
+    padding:10px
+}
+.navImg{
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
 }
 
-.logo {
-	margin: -10px;
-}
 
 /***************** HEADER STYLES ****************/
 
@@ -192,7 +199,6 @@ header{
     margin: 70px 0;
 }
 .title{
-    display: flex;
     flex-direction: column;
     justify-content: center;
     flex-grow:2;
@@ -248,29 +254,27 @@ footer{
 /********************** MEDIA QUERIES *********************/
 
 /*********************** MOBILE ************************/
-@media screen and (max-width:736px) 
-    and (min-width: 414px) {
+@media screen and (max-width:500px)  {
 /********************** NAV STYLES ******************/
-    nav {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        
+nav{
+    display: flex;
+    flex-direction: column-reverse;
+    }   
+    .topNav{
+       display: flex;
+       flex-direction: column;
+       text-align: center;
+       width:100%;
+       
     }
-    nav a{
+    .topNav a{
         border-bottom:1px solid black;
         padding: 20px 0;
     }
-    nav :nth-child(1) { order: 1; }
-    nav :nth-child(2) { order: 2; }
-    nav :nth-child(3) { order: 3; }
-    nav :nth-child(4) { order: 4; }
-    nav :nth-child(5) { order: 5; }
-    nav :nth-child(6) { order: 6; }
-    nav :nth-child(7) { order: 0; }
-
+    .navImg{
+        width:100%;
+    }
     .logo{
-        width:40%;
         margin: 0 auto;
     }
 /********************** HEADER STYLES ******************/
@@ -288,30 +292,40 @@ footer{
         align-content: center;
     }
     .topContent div{
-        width:95%;
-        margin: 10px auto;
+        width:98%;
+        margin: 10px 0;
     }
     .bottomContent div{
-        width:95%;
-        margin: 10px auto;
+        width:98%;
+        margin: 10px 0;
     }
 }
 
 /*********************** TABLET ************************/
-@media only screen 
-  and (min-width: 768px) 
-  and (max-width: 1024px) {
-    .headerImg img{
-        display: none;
-    }
-    header{
-        display: flex;
-        justify-content: center;
-    }
-    .title{
-        margin:0px;
-        display: flex;
-    }
+@media only screen and (max-width: 800px)
+    and (min-width: 500px) {
+        nav {
+            flex-direction: column-reverse;
+        }
+        .topNav{
+            width:100%;
+        }
+        .navImg{
+            width:100%;
+        }
+        .logo{
+            margin:0 auto;
+        }
+        .headerImg img{
+            display: none;
+        }
+        header{
+            display: flex;
+            justify-content: center;
+        }
+        .title{
+            margin:0px;
+        }
     
 
 }
