@@ -242,3 +242,55 @@ footer{
     text-align: center;
     margin: 40px 0 10px 0;
 }
+
+/********************** MEDIA QUERIES *********************/
+
+/*********************** MOBILE ************************/
+@media screen and (max-width:736px) and (min-width: 414px){
+/********************** NAV STYLES ******************/
+    nav {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        
+    }
+    nav a{
+        border-bottom:1px solid black;
+        padding: 20px 0;
+    }
+    nav :nth-child(1) { order: 1; }
+    nav :nth-child(2) { order: 2; }
+    nav :nth-child(3) { order: 3; }
+    nav :nth-child(4) { order: 4; }
+    nav :nth-child(5) { order: 5; }
+    nav :nth-child(6) { order: 6; }
+    nav :nth-child(7) { order: 0; }
+
+    .logo{
+        width:40%;
+        margin: 0 auto;
+    }
+/********************** HEADER STYLES ******************/
+    .title{
+        margin:0 auto;
+    }
+
+    .headerImg img{
+        display: none;
+    }
+
+    .topContent, .bottomContent {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+    }
+    .topContent div{
+        width:95%;
+        margin: 10px auto;
+    }
+    .bottomContent div{
+        width:95%;
+        margin: 10px auto;
+    }
+
+}
