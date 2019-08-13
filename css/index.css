@@ -179,7 +179,7 @@ nav{
 }
 
 nav a {
-	color: lightgray;
+	color: gray;
     text-decoration: none;
     padding:10px
 }
@@ -253,6 +253,34 @@ footer{
 
 /********************** MEDIA QUERIES *********************/
 
+/*********************** TABLET ************************/
+@media only screen and (max-width: 800px) {
+    /******************* NAV STYLES ********************/
+        nav {
+            flex-direction: column-reverse;
+        }
+        .topNav{
+            width:100%;
+        }
+        .navImg{
+            width:100%;
+        }
+        .logo{
+            margin:0 auto;
+        }
+    /********************** HEADER STYLES **********************/
+        .headerImg img{
+            display: none;
+        }
+        header{
+            display: flex;
+            justify-content: center;
+        }
+        .title{
+            margin:0px;
+        }
+    }
+
 /*********************** MOBILE ************************/
 @media screen and (max-width:500px)  {
 /********************** NAV STYLES ******************/
@@ -301,31 +329,3 @@ nav{
     }
 }
 
-/*********************** TABLET ************************/
-@media only screen and (max-width: 800px)
-    and (min-width: 500px) {
-        nav {
-            flex-direction: column-reverse;
-        }
-        .topNav{
-            width:100%;
-        }
-        .navImg{
-            width:100%;
-        }
-        .logo{
-            margin:0 auto;
-        }
-        .headerImg img{
-            display: none;
-        }
-        header{
-            display: flex;
-            justify-content: center;
-        }
-        .title{
-            margin:0px;
-        }
-    
-
-}
